@@ -64,23 +64,23 @@ epTB = 0*1e-2
 
 
 components = [0,1,2,3,4,5,6,7,8,9,10,11,12,13]
-components =[0,1,2]
+# components =[0,1,2]
 if Compuestos:
     if TBE_exp:
-        dir_save = "Compuestos_TB_exp_"
+        dir_save = "RESULTS/Compuestos_TB_exp_"
         if HCE_exp:
             #dir_save += "RHC_exp/"
             dir_save += "RHC_exp/" 
         else:
             dir_save += "RHC_corr/"
     else:
-       dir_save = "Compuestos_TB_corr_" 
+       dir_save = "RESULTS/Compuestos_TB_corr_" 
        if HCE_exp:
            dir_save += "RHC_exp/"
        else:
            dir_save += "RHC_corr/"
 else:
-    dir_save = "Componentes/"
+    dir_save = "RESULTS/Componentes/"
 if not os.path.exists(dir_save):
     os.makedirs(dir_save)
     
@@ -117,8 +117,8 @@ T      = 288.705556
 #runs   = [100,200,300,400,500,600,700,800,900,1000,2000,5000,10000]       # Runs of each experiment
 #runs   = [7000,10000,20000, 30000,40000,50000,70000,100000,200000]  
 runs = [50000]
-#runs    = [1] 
-S_runs  = 1   # Runs to perform the statistics
+runs    = [10000] 
+S_runs  = 10   # Runs to perform the statistics
 l_runs  = len(runs)
 
 n_dims = 9

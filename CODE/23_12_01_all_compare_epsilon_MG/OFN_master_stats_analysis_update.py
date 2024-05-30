@@ -33,7 +33,7 @@ compuestos = {0:'CH3', 1:'CH2', 2:'CH(CHAIN)', 3:'C(CHAIN)',
 Compuestos_n = ("Hexane", "Cyclohexane", "Benzene", "Heptane", "Cycloheptane",
                 "Toluene", "Octane", "Cyclooctane", "Ethylbenzene", "Nonane",
                 "Indane", "Decane", "1-Methylnaphthalene", "Undecane")
-dir_df_ex = "Data/"
+dir_df_ex = "DATA/"
 comp = []
 TBE_exp    = True
 HCE_exp    = True
@@ -56,7 +56,7 @@ for component in np.arange(1,components):
         df_name_f =  dir_df_ex+"df_FG_" +str(IFG)+"_iCEOS_"+str(iCEOS)+"_RVM_"+ str(RVM)+"_RMW_"+ str(RMW)+"_RCH_"+str(RCH)+"_RTB_"+str(RTB)+ "_F.xlsx"
         df_name =  dir_df_ex+"df_FG_" +str(IFG)+"_iCEOS_"+str(iCEOS)+"_RVM_"+ str(RVM)+"_RMW_"+ str(RMW)+"_RCH_"+str(RCH)+"_RTB_"+str(RTB)+ "_ex.xlsx"
         if TBE_exp:
-            dir_name = "Compuestos_TB_exp_" 
+            dir_name = "RESULTS/Compuestos_TB_exp_" 
             if HCE_exp==True:
                 sheet_n = "RHC_exp_TB_exp"
                 dir_name += "RHC_exp/"
@@ -65,7 +65,7 @@ for component in np.arange(1,components):
                 sheet_n = "RHC_corr_TB_exp"
 
         else:
-            dir_name = "Compuestos_TB_corr_"
+            dir_name = "RESULTS/Compuestos_TB_corr_"
             if HCE_exp==True:
                 dir_name += "RHC_exp/"
                 sheet_n = "RHC_exp_TB_corr"
@@ -102,7 +102,7 @@ for component in np.arange(1,components):
   
         #%%
         if Compuestos:
-            dir_plots = "Plots_compuestos_"
+            dir_plots = "PLOTS/Plots_compuestos_"
             if TBE_exp:
                 dir_plots += "TB_exp_"
                 if HCE_exp:
@@ -116,7 +116,7 @@ for component in np.arange(1,components):
                 else:
                     dir_plots += "RHC_corr/"
         else:
-            dir_plots = "Plots_componentes_"
+            dir_plots = "PLOTS/Plots_componentes_"
             if TBE_exp:
                 dir_plots += "_exp/"
             else:

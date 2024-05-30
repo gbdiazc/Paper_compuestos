@@ -33,7 +33,7 @@ compuestos = {0:'CH3', 1:'CH2', 2:'CH(CHAIN)', 3:'C(CHAIN)',
 Compuestos_n = ("Hexane", "Cyclohexane", "Benzene", "Heptane", "Cycloheptane",
                 "Toluene", "Octane", "Cyclooctane", "Ethylbenzene", "Nonane",
                 "Indane", "Decane", "1-Methylnaphthalene", "Undecane")
-dir_df_ex = "Data/"
+dir_df_ex = "DATA/"
 comp = []
 df_all = []
 sol_OF_all_C =[]
@@ -60,7 +60,7 @@ for component in np.arange(0,components):
         df_datos = dir_df_ex+ "Critical.xlsx"
 
         if TBE_exp:
-            dir_name = "Compuestos_TB_exp_" 
+            dir_name = "RESULTS/Compuestos_TB_exp_" 
             if HCE_exp==True:
                 sheet_n = "RHC_exp_TB_exp"
                 dir_name += "RHC_exp/"
@@ -69,7 +69,7 @@ for component in np.arange(0,components):
                 sheet_n = "RHC_corr_TB_exp"
 
         else:
-            dir_name = "Compuestos_TB_corr_"
+            dir_name = "RESULTS/Compuestos_TB_corr_"
             if HCE_exp==True:
                 dir_name += "RHC_exp/"
                 sheet_n = "RHC_exp_TB_corr"
@@ -102,7 +102,7 @@ for component in np.arange(0,components):
   
         #%%
         if Compuestos:
-            dir_plots = "Plots_compuestos_"
+            dir_plots = "PLOTS/Plots_compuestos_"
             if TBE_exp:
                 dir_plots += "TB_exp_"
                 if HCE_exp:
@@ -116,7 +116,7 @@ for component in np.arange(0,components):
                 else:
                     dir_plots += "RHC_corr/"
         else:
-            dir_plots = "Plots_componentes_"
+            dir_plots = "PLOTS/Plots_componentes_"
             if TBE_exp:
                 dir_plots += "_exp/"
             else:

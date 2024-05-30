@@ -59,20 +59,20 @@ components = [0,1,2,3,4,5,6,7,8,9,10,11,12,13]
 #components =[3]
 if Compuestos:
     if TBE_exp:
-        dir_save = "Compuestos_TB_exp_"
+        dir_save = "RESULTS/Compuestos_TB_exp_"
         if HCE_exp:
             #dir_save += "RHC_exp/"
             dir_save += "RHC_exp/" 
         else:
             dir_save += "RHC_corr/"
     else:
-       dir_save = "Compuestos_TB_corr_" 
+       dir_save = "RESULTS/Compuestos_TB_corr_" 
        if HCE_exp:
            dir_save += "RHC_exp/"
        else:
            dir_save += "RHC_corr/"
 else:
-    dir_save = "Componentes/"
+    dir_save = "RESULTS/Componentes/"
 if not os.path.exists(dir_save):
     os.makedirs(dir_save)
     

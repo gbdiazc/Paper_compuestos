@@ -34,7 +34,7 @@ compuestos = {0:'CH3', 1:'CH2', 2:'CH(CHAIN)', 3:'C(CHAIN)',
 Compuestos_n = ("Hexane", "Cyclohexane", "Benzene", "Heptane", "Cycloheptane",
                 "Toluene", "Octane", "Cyclooctane", "Ethylbenzene", "Nonane",
                 "Indane", "Decane", "1-Methylnaphthalene", "Undecane")
-dir_df_ex = "Data/"
+dir_df_ex = "DATA/"
 comp = []
 labels =[]
 sols_data = []
@@ -131,7 +131,7 @@ for component in [0,1,2,3,4,5,6,7,8,9,10,11,12,13]:
         df_name_fnew =  dir_df_ex+"df_FG_" +str(IFG)+"_iCEOS_"+str(iCEOS)+"_RVM_"+ str(RVM)+"_RMW_"+ str(RMW)+"_RCH_"+str(RCH)+"_RTB_"+str(RTB)+ "_F_GD_LL.xlsx"
         df_name =  dir_df_ex+"df_FG_" +str(IFG)+"_iCEOS_"+str(iCEOS)+"_RVM_"+ str(RVM)+"_RMW_"+ str(RMW)+"_RCH_"+str(RCH)+"_RTB_"+str(RTB)+ "_ex.xlsx"
         if TBE_exp:
-            dir_name = "Compuestos_case_"+str(MG_case)+"_TB_exp_"
+            dir_name = "RESULTS/Compuestos_case_"+str(MG_case)+"_TB_exp_"
             if HCE_exp==True:
                 sheet_n = "RHC_exp_TB_exp"
                 dir_name += "RHC_exp/"
@@ -140,7 +140,7 @@ for component in [0,1,2,3,4,5,6,7,8,9,10,11,12,13]:
                 sheet_n = "RHC_corr_TB_exp"
 
         else:
-            dir_name = "Compuestos_TB_corr_"
+            dir_name = "RESULTS/Compuestos_TB_corr_"
             if HCE_exp==True:
                 dir_name += "RHC_exp/"
                 sheet_n = "RHC_exp_TB_corr"
@@ -179,7 +179,7 @@ for component in [0,1,2,3,4,5,6,7,8,9,10,11,12,13]:
   
         #%%
         if Compuestos:
-            dir_plots = "Plots_compuestos_"
+            dir_plots = "PLOTS/Plots_compuestos_"
             if TBE_exp:
                 dir_plots += "TB_exp_"
                 if HCE_exp:
@@ -193,7 +193,7 @@ for component in [0,1,2,3,4,5,6,7,8,9,10,11,12,13]:
                 else:
                     dir_plots += "RHC_corr/"
         else:
-            dir_plots = "Plots_componentes_"
+            dir_plots = "PLOTS/Plots_componentes_"
             if TBE_exp:
                 dir_plots += "_exp/"
             else:
@@ -901,6 +901,7 @@ for sp in [VC_dic_Pc,VC_dic_Tc,VC_dic_Tb,VC_dic_Ac]:
     axs[i].axvline(x = 5.75, color = 'maroon', linestyle = ':') 
     i+=1
     #plt.ylabel(, fontsize=fs)
+x = np.arange(0,10)
 plt.xticks(x, labl, rotation=75, fontsize=fs-2)
 plt.text(0.5, 2.7, 'Paraffins', fontsize = 15, color = 'maroon') 
 plt.text(3.5, 2.7, 'Naphthenes', fontsize = 15, color = 'maroon') 
